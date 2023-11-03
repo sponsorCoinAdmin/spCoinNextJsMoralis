@@ -1,4 +1,4 @@
-// 'use client';
+'use client';
 import "./App.css";
 import Header from "./components/Header";
 import Agents from "./components/Agents";
@@ -10,14 +10,16 @@ import { useConnect, useAccount } from "wagmi";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
 
 function App() {
+  /* ROBIN NEW CODE NOT WORKING 
   const { address, isConnected } = useAccount();
   const { connect } = useConnect({
     connector: new MetaMaskConnector(),
   });
+  */
 
   return (
     <div className="App">
-      <Header connect={connect} isConnected={isConnected} address={address} />
+      {/* <Header connect={connect} isConnected={isConnected} address={address} />
       <div className="mainWindow">
         <Routes>
           <Route path="/" element={<Swap isConnected={isConnected} address={address} />} />
@@ -25,7 +27,7 @@ function App() {
           <Route path="/tokens" element={<Tokens />} />
           <Route path="/Recipients" element={<Recipients />} />
         </Routes>
-      </div>
+      </div> */}
     </div>
   )
 }
